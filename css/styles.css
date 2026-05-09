@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("/fonts/AtkinsonHyperlegibleNext-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("/fonts/AtkinsonHyperlegibleNext-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --text: #0b0c0c;
   --background: #ffffff;
@@ -35,7 +51,7 @@ body {
   margin: 0;
   color: var(--text);
   background: var(--background);
-  font-family: Arial, sans-serif;
+  font-family: "Atkinson Hyperlegible", Arial, sans-serif;
   font-size: 1.125rem;
   line-height: 1.5;
 }
