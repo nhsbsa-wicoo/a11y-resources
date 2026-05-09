@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
   <meta charset="utf-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>
     {% if title %}
@@ -17,43 +14,29 @@
   </title>
 
   {% if description %}
-    <meta
-      name="description"
-      content="{{ description }}"
-    >
+    <meta name="description" content="{{ description }}">
   {% endif %}
 
-  <link
-  rel="stylesheet"
-  href="{{ '/css/styles.css' | url }}"
->
+  <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
 
-  <link
-    rel="icon"
-    href="/a11y-resources/favicon.ico"
-  >
+  <link rel="icon" href="/a11y-resources/favicon.ico">
 </head>
 
 <body>
 
-  <a class="skip-link" href="#main-content">
-    Skip to main content
-  </a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
     <div class="wrapper">
 
       <div class="site-identity">
-        <a
-          class="site-title"
-          href="/a11y-resources/"
-          aria-label="Accessibility resources homepage"
-        >
+        <a class="site-title" href="/a11y-resources/" aria-label="Accessibility resources homepage"
+>
           Accessibility resources
         </a>
       </div>
 
-      <nav aria-label="Main navigation">
+      {# <nav aria-label="Main navigation">
         <ul class="nav-list">
 
           <li>
@@ -69,36 +52,28 @@
 
           <li>
            <a
-  href="/a11y-resources/guidance/"
-  {% if "/guidance/" in page.url %}
-    aria-current="page"
-  {% endif %}
->
-  Guidance
-</a>
+              href="/a11y-resources/guidance/"
+              {% if "/guidance/" in page.url %}
+                aria-current="page"
+              {% endif %}
+            >
+              Guidance
+            </a>
           </li>
-
         </ul>
-      </nav>
-
+      </nav> #}
     </div>
   </header>
 
-  <main
-    id="main-content"
-    class="wrapper"
-    tabindex="-1"
-  >
+  <main id="main-content" class="wrapper">
     {{ content | safe }}
   </main>
 
   <footer class="site-footer">
     <div class="wrapper">
-
       <p>
         Built with Eleventy and designed with accessibility in mind.
       </p>
-
     </div>
   </footer>
 
