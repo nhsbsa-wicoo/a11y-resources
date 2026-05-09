@@ -1,4 +1,4 @@
-name: Deploy Eleventy site to GitHub Pages
+name: A11y resources site deployment
 
 on:
   push:
