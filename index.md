@@ -1,10 +1,11 @@
 ---
 layout: base.njk
-title: Accessibility resources
+title: Cross-Government Accessibility Bar/Lab resource list
 ---
 
-# Accessibility resources
+# Cross-Government Accessibility Bar/Lab resource list
 This resource list brings together tools, guidance, and examples shared across government to support anyone setting up, running, or visiting an Accessibility Bar or Lab. 
+
 Please note: We are not affiliated with any of the resources listed below, and inclusion does not imply endorsement.
 
 ## Websites:

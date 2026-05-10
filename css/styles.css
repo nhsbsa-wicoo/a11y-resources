@@ -25,7 +25,7 @@
 :root {
   --text: #0b0c0c;
   --background: #ffffff;
-  --brand: #005eb8;
+  --brand: #1a65a6;
   --border: #b1b4b6;
   --focus: #ffdd00;
   --content-width: 70ch;
@@ -99,31 +99,46 @@ body {
 }
 
 a {
-  color: var(--brand);
-  text-underline-offset: 0.15em;
+    text-decoration: underline;
+    text-decoration-thickness: max(1px, 0.0625rem);
+    text-underline-offset: 0.1578em;
 }
-
 a:hover {
-  text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
-  -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
-  -webkit-text-decoration-skip: none;
-  text-decoration-skip: none;
-  color: var(--hover-color, #0f385c);
+    text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+    -webkit-text-decoration-skip: none;
+    text-decoration-skip: none;
 }
-
 a:focus {
-  outline: 3px solid rgba(0, 0, 0, 0);
-  color: var(--text, #0b0c0c);
-  background-color: var(--focus, #ffdd00);
-  box-shadow:
-      0 -2px var(--focus, #ffdd00),
-      0 4px var(--text, #0b0c0c);
-  text-decoration: none;
+    outline: 3px solid rgba(0, 0, 0, 0);
+    color: var(--text, #0b0c0c);
+    background-color: var(--focus, #ffdd00);
+    box-shadow:
+        0 -2px var(--focus, #ffdd00),
+        0 4px var(--text, #0b0c0c);
+    text-decoration: none;
 }
-
+@supports not (text-wrap: balance) {
+    a:focus {
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+    }
+}
+a:link {
+    color: var(--brand, #1a65a6);
+}
 a:visited {
     color: var(--link-visited-colour, #54319f);
+}
+a:hover {
+    color: var(--hover-color, #0f385c);
+}
+a:active {
+    color: var(--text, #0b0c0c);
+}
+a:focus {
+    color: var(--text, #0b0c0c);
 }
 
 [aria-current="page"] {
